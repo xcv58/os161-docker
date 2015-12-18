@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
+
 # install toolchanin
-apt-get -qqy install software-properties-common
-add-apt-repository ppa:geoffrey-challen/os161-toolchain
-apt-get -qq update
-apt-get -qqy install os161-toolchain git gcc silversearcher-ag
+sudo apt-get -qqy install software-properties-common
+sudo add-apt-repository ppa:geoffrey-challen/os161-toolchain
+sudo apt-get -qq update
+sudo apt-get -qqy install os161-toolchain git gcc silversearcher-ag
 
 # fetch os161 source code
-cd /root
+cd ~
 git clone https://github.com/benesch/os161.git src
 cd src
 
@@ -22,4 +23,4 @@ cd ../compile/ASST0
 bmake depend
 bmake
 bmake install
-cp /usr/share/examples/sys161/sys161.conf.sample /root/os161/root/sys161.conf
+cp /usr/share/examples/sys161/sys161.conf.sample ~/os161/root/sys161.conf

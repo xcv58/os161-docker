@@ -6,7 +6,7 @@ http://docs.docker.com/engine/installation/
 
 ```bash
 docker pull xcv58/os161
-docker run --name os161 -w /root/ -t -i xcv58/os161
+docker run -ti --name os161 xcv58/os161
 cd os161/root/
 sys161 kernel
 ```
@@ -27,3 +27,15 @@ docker start -i os161
 ```
 
 to connect the same container you created before.
+
+Otherwise, you can use this command to start a long run container: 
+
+```
+docker run -dt --name os161 xcv58/os161
+```
+
+Then use below command to access your container:
+
+```
+docker exec -ti os161 bash
+```

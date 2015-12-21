@@ -9,6 +9,8 @@ dependencies:
 
 test:
   override:
-    - docker run -dt --name os161 xcv58/os161
-    - docker exec -ti os161 bash
+    - docker run -ti --name os161 xcv58/os161
+    - cd os161/root
+    - sys161 kernel
+    - q
     - exit

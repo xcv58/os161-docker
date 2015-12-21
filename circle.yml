@@ -1,3 +1,14 @@
 machine:
   services:
     - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t xcv58/os161 .
+
+test:
+  override:
+    - docker run -dt --name os161 xcv58/os161
+    - docker exec -ti os161 bash
+    - exit

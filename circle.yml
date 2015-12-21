@@ -12,4 +12,5 @@ test:
     - docker run -di --name os161 xcv58/os161 
     - docker ps
     - docker stop os161
-    - docker rm os161
+    - docker start os161
+    - docker stop os161

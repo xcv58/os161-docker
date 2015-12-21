@@ -9,6 +9,7 @@ dependencies:
 
 test:
   override:
+    - expect test.sh
     - docker run -di --name os161 xcv58/os161 
     - docker ps
     - docker stop os161

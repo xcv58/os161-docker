@@ -4,7 +4,7 @@ proc do_exit {msg} {
     exit 1
 }
 
-set timeout 10
+set timeout 5
 spawn docker run -ti xcv58/os161
 expect "trinity@zion:"
 send "cd os161/root; sys161 kernel\r"
@@ -13,6 +13,6 @@ send "?\r"
 expect "Next kernel heap generation"
 send "q\r"
 expect {
-    "trinity1@zion:" { exit 0 }
+    "trinity@zion:" { exit 0 }
     timeout {do_exit "timed out waiting for prompt"}
 }

@@ -4,8 +4,8 @@ proc do_exit {msg} {
     exit 1
 }
 
-set timeout 2
-spawn docker run -ti --name os161 xcv58/os161
+set timeout 10
+spawn docker run -ti xcv58/os161
 expect "trinity@zion:"
 send "cd os161/root; sys161 kernel\r"
 expect "OS/161 kernel"

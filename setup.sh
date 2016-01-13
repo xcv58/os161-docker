@@ -4,7 +4,7 @@
 sudo apt-get -qqy install software-properties-common
 sudo add-apt-repository ppa:geoffrey-challen/os161-toolchain
 sudo apt-get -qq update
-sudo apt-get -qqy install os161-toolchain git gcc silversearcher-ag vim
+sudo apt-get -qqy install os161-toolchain git gcc silversearcher-ag vim tmux
 
 # fetch os161 source code
 cd ~

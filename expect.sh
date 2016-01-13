@@ -13,6 +13,6 @@ send "?\r"
 expect "Next kernel heap generation"
 send "q\r"
 expect {
-    "trinity@zion:" { exit 0 }
+    "trinity@zion" { exit 0 }
     timeout {do_exit "timed out waiting for prompt"}
 }

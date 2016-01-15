@@ -46,4 +46,4 @@ cd tmux_conf
 sudo zsh install.zsh
 
 # setup gdbinit
-curl -L http://os161.xcv58.me | sudo bash
+curl -L http://os161.xcv58.com | sudo bash

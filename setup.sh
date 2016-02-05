@@ -5,13 +5,13 @@ sudo apt-get -qqy install software-properties-common
 sudo add-apt-repository -y ppa:geoffrey-challen/os161-toolchain
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get -qq update
-sudo apt-get -qqy install os161-toolchain git gcc silversearcher-ag vim tmux zsh curl wget make tree
+sudo apt-get -qqy install os161-toolchain git gcc silversearcher-ag vim tmux zsh curl wget make tree golang
 
 sudo locale-gen en_US.UTF-8
 
 # fetch os161 source code
 cd ~
-git clone https://github.com/benesch/os161.git src
+git clone https://gitlab.ops-class.org/staff/os161.git src
 cd src
 
 # build user bin

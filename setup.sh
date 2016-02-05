@@ -9,25 +9,6 @@ sudo apt-get -qqy install os161-toolchain git gcc silversearcher-ag vim tmux zsh
 
 sudo locale-gen en_US.UTF-8
 
-# fetch os161 source code
-cd ~
-git clone https://gitlab.ops-class.org/staff/os161.git src
-cd src
-
-# build user bin
-./configure
-bmake
-bmake install
-
-# build kern
-cd kern/conf
-./config ASST0
-cd ../compile/ASST0
-bmake depend
-bmake
-bmake install
-cp /usr/share/examples/sys161/sys161.conf.sample ~/os161/root/sys161.conf
-
 # setup dev tools
 DEV_TOOLS=~/.devtools
 mkdir -p ${DEV_TOOLS}
@@ -47,3 +28,17 @@ sudo zsh install.zsh
 
 # setup gdbinit
 curl -L http://os161.xcv58.com | sudo bash
+
+# fetch os161 source code
+cd ~
+git clone https://gitlab.ops-class.org/staff/os161.git src
+cd src
+
+# build user bin
+./configure
+bmake
+bmake install
+
+# build kern
+a b
+cp /usr/share/examples/sys161/sys161.conf.sample ~/os161/root/sys161.conf
